@@ -28,7 +28,11 @@ function changeSize(input) {
 }
 
 function squareColor() {
-    this.style.backgroundColor= color;
+    if (color === "rainbow") {
+        this.style.backgroundColor = `hsl(${Math.random() * 360},100%,50%)`;
+    } else {
+    this.style.backgroundColor = color;
+    }
 }
 
 function changeColor(choice) {
