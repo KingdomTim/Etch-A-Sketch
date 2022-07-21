@@ -8,17 +8,18 @@
 </head>
 <body>
     <div class="flex-container">
-        <div class="title"><h1>SketchPad</h1></div>
+        <div class="title"><h1>Etch-a-Sketch</h1></div>
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button onclick = "changeColor('black')">Choose Color</button>
-                <button onclick = "changeColor('black')">Black</button>
-                <button onclick = "changeColor('rainbow')">Rainbow</button>
-                <button onclick = "changeColor('white')">Eraser</button>
-                <button onclick = "resetBoard()">Reset</button>
+                <div class="colorWheel">
+                <input type="color" id="colorSelector" onclick="changeColor(this.value)">Color</div>
+                <button class="black" onclick = "changeColor('black')">Black</button>
+                <button class="rainbow" onclick = "changeColor('rainbow')">Rainbow</button>
+                <button class="eraser" onclick = "changeColor('white')">Eraser</button>
+                <button class="reset" onclick = "resetBoard()">Reset</button>
             </div>
-            <div>
+            <div class="sliderAndValue">
                 <input id="slider" type="range" placeholder="Size of Board" min="2" max="100" value="16" onchange= "changeSize(this.value)"/>
                 <div class="value">Grid Size: 16x16<div>
             </div>
