@@ -22,7 +22,7 @@ function changeSize(input) {
         if(input >= 2 && input <= 100) {
         adjustBoard(input); 
     } else {
-        console.log('too many squares')
+        alert('Invalid grid size')
     }
 
 }
@@ -38,3 +38,16 @@ function squareColor() {
 function changeColor(choice) {
     color = choice;
 }
+
+function resetBoard() {
+    let board = document.querySelector('.board');
+    let squares = board.querySelectorAll('div')
+    squares.forEach((div) => div.style.backgroundColor = 'white');
+}
+
+const slider = document.querySelector('#slider')
+const screenVal = document.querySelector('.value')
+
+slider.addEventListener('input', () => {
+    let val = document.getElementById('slider').value;
+    screenVal.textContent = 'Grid Size: ' + val + 'x' + val; })

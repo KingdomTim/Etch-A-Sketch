@@ -12,14 +12,15 @@
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
+                <button onclick = "changeColor('black')">Choose Color</button>
                 <button onclick = "changeColor('black')">Black</button>
-                <button onclick = "changeColor('red')">Red</button>
                 <button onclick = "changeColor('rainbow')">Rainbow</button>
-                <button>Reset</button>
+                <button onclick = "changeColor('white')">Eraser</button>
+                <button onclick = "resetBoard()">Reset</button>
             </div>
             <div>
-                <input type="text" placeholder="Size of Board" value="16" onchange= "changeSize(this.value)"/>
-                <button>Set Size</button>
+                <input id="slider" type="range" placeholder="Size of Board" min="2" max="100" value="16" onchange= "changeSize(this.value)"/>
+                <div class="value">Grid Size: 16x16<div>
             </div>
         </div>
     </div>
