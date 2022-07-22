@@ -1,4 +1,7 @@
 let color = 'black';
+let mouseDown = 0;
+document.body.onmousedown = () => mouseDown = 1;
+document.body.onmouseup = () => mouseDown = 0;
 
 function adjustBoard(size) {
     let board = document.querySelector('.board');
@@ -10,7 +13,7 @@ function adjustBoard(size) {
     let amount = size * size 
     for(let i =  0; i<amount; i++) {
         let square = document.createElement('div')
-        square.addEventListener("mouseover", squareColor)
+        square.addEventListener('mouseover', squareColor)
         square.style.backgroundColor = 'white'
         board.insertAdjacentElement('beforeend',square)
     }
@@ -28,10 +31,12 @@ function changeSize(input) {
 }
 
 function squareColor() {
-    if (color === "rainbow") {
-        this.style.backgroundColor = `hsl(${Math.random() * 360},100%,50%)`;
-    } else {
-    this.style.backgroundColor = color;
+    if (mouseDown) {
+        if (color === "rainbow") {
+            this.style.backgroundColor = `hsl(${Math.random() * 360},100%,50%)`;
+        } else {
+        this.style.backgroundColor = color;
+        }
     }
 }
 
@@ -51,3 +56,5 @@ const screenVal = document.querySelector('.value')
 slider.addEventListener('input', () => {
     let val = document.getElementById('slider').value;
     screenVal.textContent = 'Grid Size: ' + val + 'x' + val; })
+
+

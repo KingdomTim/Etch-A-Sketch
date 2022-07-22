@@ -3,10 +3,14 @@
     height:500px;
     display: grid;
     border: 1px solid black;
+    user-select: none;
 }
 
 .title {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color: rgb(0, 130, 153);
+    font-style: italic;
 }
 
 body {
@@ -38,6 +42,7 @@ body {
     color: white;
     font-weight: bold;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .rainbow {
@@ -58,6 +63,7 @@ body {
     font-weight: bold;
     color: white;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .eraser {
@@ -65,6 +71,7 @@ body {
     color: black;
     font-weight: bold;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .reset {
@@ -72,6 +79,7 @@ body {
     color: black;
     font-weight: bold;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 #slider {
@@ -81,14 +89,25 @@ body {
 .value {
     font-weight: bold;
     font-size: 20px;
+    color: rgb(19, 61, 117);
 }
 
 #colorSelector {
-    border-radius: 60%;
     background-color: lightblue;
+    cursor: pointer;
+    width: 30px;
+    border-radius: 60%;
 }
 
 .colorWheel {
     display:flex;
     gap: -10px;
+    align-items: center;
+    gap: 8px;
 }
+
+#slider {
+    cursor: all-scroll;
+    color: black;
+}
+
