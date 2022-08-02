@@ -111,3 +111,18 @@ body {
     color: black;
 }
 
+img {
+    width: 20px;
+}
+
+img:hover {
+    width: 23px;
+}
+
+.footer {
+    display: flex;
+    gap: 5px;
+    height: 50px;
+    align-items: flex-end;
+    font-weight: bold;
+}
