@@ -116,7 +116,7 @@ img {
 }
 
 img:hover {
-    width: 23px;
+    transform: scale(1.1);
 }
 
 .footer {
