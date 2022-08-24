@@ -126,3 +126,11 @@ img:hover {
     align-items: flex-end;
     font-weight: bold;
 }
+
+.colorWheel:active,
+.black:active,
+.rainbow:active,
+.eraser:active,
+.reset:active {
+    transform: scale(1.05)
+}
